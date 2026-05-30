@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ruang Cerita | Layanan Konsultasi & Teman Cerita</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <nav class="fixed-top bg-white border-bottom border-slate-100 plain-transition" id="navbar" style="background: rgba(255, 255, 255, 0.95) !important; backdrop-filter: blur(12px)">
+      <div class="custom-container">
+        <div class="d-flex justify-content-between align-items-center" style="height: 5rem">
+          <div class="d-flex align-items-center gap-2 cursor-pointer" onclick="window.scrollTo(0, 0)">
+            <div class="rounded-circle bg-primary-100 d-flex align-items-center justify-content-center text-primary-600" style="width: 2.5rem; height: 2.5rem">
+              <i class="fa-solid fa-leaf fs-5"></i>
+            </div>
+            <span class="fw-bold fs-4 tracking-tight text-slate-900">Ruang<span class="text-primary-600">Cerita</span></span>
+          </div>
+
+          <div class="d-none d-md-flex align-items-center gap-4">
+            <a href="#layanan" class="nav-link-custom plain-transition">Layanan</a>
+            <a href="#keunggulan" class="nav-link-custom plain-transition">Mengapa Kami</a>
+            <a href="#edukasi" class="nav-link-custom plain-transition">Edukasi</a>
+            <a href="#cara-kerja" class="nav-link-custom plain-transition">Cara Kerja</a>
+            <a
+              href="#konsultasi"
+              class="bg-primary-600 text-white px-4 py-2 rounded-full-btn fw-medium plain-transition text-decoration-none shadow-primary-custom"
+              onmouseover="this.style.backgroundColor = 'var(--primary-700)'"
+              onmouseout="this.style.backgroundColor = 'var(--primary-600)'"
+              >Mulai Cerita</a
+            >
+
+            <div class="bg-slate-200" style="width: 1px; height: 1.5rem"></div>
+
+            
+          </div>
+
+          <div class="d-block d-md-none d-flex align-items-center">
+            <button id="mobile-menu-btn" class="btn border-0 text-slate-600" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-menu">
+              <i class="fa-solid fa-bars fs-3"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="collapse d-md-none bg-white border-bottom border-slate-100 position-absolute w-100">
+        <div class="px-3 pt-2 pb-4 d-flex flex-column gap-2 shadow-lg">
+          <a href="#layanan" class="nav-link-custom p-3 rounded-3 mobile-link text-decoration-none">Layanan</a>
+          <a href="#keunggulan" class="nav-link-custom p-3 rounded-3 mobile-link text-decoration-none">Mengapa Kami</a>
+          <a href="#edukasi" class="nav-link-custom p-3 rounded-3 mobile-link text-decoration-none">Edukasi</a>
+          <a href="#cara-kerja" class="nav-link-custom p-3 rounded-3 mobile-link text-decoration-none">Cara Kerja</a>
+          <a href="#konsultasi" class="p-3 mt-2 text-center rounded-full-btn bg-primary-600 text-white fw-medium mobile-link text-decoration-none">Mulai Cerita Sekarang</a>
+
+          <div class="border-top border-slate-100 my-2 pt-2"></div>
+          <a href="#portal" class="p-3 rounded-3 text-slate-500 mobile-link text-decoration-none d-flex align-items-center gap-2"> <i class="fa-solid fa-right-to-bracket"></i> Login Konselor / Admin </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="position-relative overflow-hidden hero-pattern">
+      <div class="custom-container position-relative" style="z-index: 10">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-6 text-center text-lg-start fade-in">
+            <div class="d-inline-block px-3 py-1 bg-primary-100 text-primary-700 rounded-full-btn fw-medium small mb-4 border border-primary-200"><i class="fa-solid fa-shield-heart me-2"></i> Ruang Aman & Rahasia 100%</div>
+            <h1 class="display-5 fw-bold text-slate-900 lh-sm mb-4">Beratnya masa kuliah jangan dipendam sendiri. Mari <span class="text-primary-600">bercerita</span>.</h1>
+            <p class="fs-5 text-slate-600 mb-4 mx-auto mx-lg-0 lh-base" style="max-width: 42rem">
+              Stres skripsi, overthinking masa depan, merasa salah jurusan, hingga konflik dengan teman kampus? Semua perasaanmu valid. Konselor kami siap mendengarkan tanpa penghakiman.
+            </p>
+            <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+              <a
+                href="#konsultasi"
+                class="bg-primary-600 text-white px-4 py-3 rounded-full-btn fw-semibold fs-5 text-decoration-none shadow-primary-custom d-flex align-items-center justify-content-center gap-2"
+                onmouseover="this.style.backgroundColor = 'var(--primary-700)'"
+                onmouseout="this.style.backgroundColor = 'var(--primary-600)'"
+              >
+                Mulai Konsultasi <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a
+                href="#cara-kerja"
+                class="bg-white text-slate-700 border border-slate-200 px-4 py-3 rounded-full-btn fw-semibold fs-5 text-decoration-none d-flex align-items-center justify-content-center"
+                onmouseover="this.style.backgroundColor = 'var(--slate-50)'"
+                onmouseout="this.style.backgroundColor = '#ffffff'"
+              >
+                Pelajari Caranya
+              </a>
+            </div>
+
+            <div class="mt-5 d-flex align-items-center justify-content-center justify-content-lg-start gap-3 small text-slate-500">
+              <div class="d-flex" style="margin-left: 0.5rem">
+                <img class="rounded-circle border border-2 border-white" style="width: 2rem; height: 2rem; margin-left: -0.5rem" src="https://placehold.co/100x100/e2e8f0/64748b?text=A" alt="User" />
+                <img class="rounded-circle border border-2 border-white" style="width: 2rem; height: 2rem; margin-left: -0.5rem" src="https://placehold.co/100x100/e2e8f0/64748b?text=B" alt="User" />
+                <img class="rounded-circle border border-2 border-white" style="width: 2rem; height: 2rem; margin-left: -0.5rem" src="https://placehold.co/100x100/e2e8f0/64748b?text=C" alt="User" />
+              </div>
+              <p class="mb-0">Telah menemani <span class="fw-semibold text-slate-700">1.200+</span> mahasiswa se-Indonesia.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 d-none d-lg-block fade-in" style="animation-delay: 0.2s">
+            <div class="position-relative">
+              <div class="position-absolute rounded-circle opacity-75" style="top: -2.5rem; left: -2.5rem; width: 10rem; height: 10rem; background-color: #fef08a; filter: blur(24px); mix-blend-mode: multiply"></div>
+              <div class="position-absolute rounded-circle opacity-75" style="bottom: -2.5rem; right: -2.5rem; width: 10rem; height: 10rem; background-color: #93c5fd; filter: blur(24px); mix-blend-mode: multiply"></div>
+
+              <div
+                class="bg-white p-4 rounded-3xl shadow-lg border border-slate-100 position-relative plain-transition"
+                style="z-index: 10; transform: rotate(2deg)"
+                onmouseover="this.style.transform = 'rotate(0deg)'"
+                onmouseout="this.style.transform = 'rotate(2deg)'"
+              >
+                <div class="d-flex align-items-center gap-3 mb-4 border-bottom border-slate-100 pb-3">
+                  <div class="bg-primary-100 rounded-circle d-flex align-items-center justify-content-center text-primary-600" style="width: 3rem; height: 3rem">
+                    <i class="fa-solid fa-user-doctor fs-4"></i>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold text-slate-800 mb-0">Konselor Sarah, S.Psi</h5>
+                    <p class="small text-success mb-0 d-flex align-items-center gap-1"><i class="fa-solid fa-circle" style="font-size: 8px"></i> Sedang Online</p>
+                  </div>
+                </div>
+                <div class="d-flex flex-column gap-3">
+                  <div class="bg-slate-100 p-3 rounded-2xl align-self-start" style="border-top-left-radius: 0 !important; max-width: 80%">
+                    <p class="small text-slate-700 mb-0">Halo! Saya di sini siap mendengarkan. Apa yang sedang membebani pikiranmu hari ini?</p>
+                  </div>
+                  <div class="align-self-end text-end" style="max-width: 80%">
+                    <div class="bg-primary-600 text-white p-3 rounded-2xl text-start" style="border-top-right-radius: 0 !important">
+                      <p class="small mb-0">Saya merasa sangat cemas akhir-akhir ini karena revisian skripsi yang menumpuk dan takut telat lulus...</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4 pt-3 border-top border-slate-100 d-flex gap-2">
+                  <div class="flex-grow-1 bg-slate-100 rounded-full-btn px-4 py-2 small text-slate-400">Ketik pesanmu di sini...</div>
+                  <div class="bg-primary-600 rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 2.5rem; height: 2.5rem"><i class="fa-solid fa-paper-plane"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="layanan" class="py-5 bg-white" style="margin-top: 3rem; margin-bottom: 3rem">
+      <div class="custom-container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-slate-900 mb-3">Apa yang ingin Anda bicarakan?</h2>
+          <p class="text-slate-600 mx-auto" style="max-width: 42rem">Kehidupan kampus penuh dinamika. Kami menyediakan ruang aman untuk berbagai macam permasalahan mahasiswa.</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <div class="col">
+            <div class="h-100 p-4 rounded-2xl border border-slate-100 bg-slate-50 hover-card-effect plain-transition cursor-pointer">
+              <div class="rounded-3 d-flex align-items-center justify-content-center mb-4 plain-transition" style="width: 3rem; height: 3rem; background-color: #dbeafe; color: #3b82f6">
+                <i class="fa-solid fa-graduation-cap fs-4"></i>
+              </div>
+              <h4 class="fw-bold fs-5 mb-2 text-slate-800">Akademik & Skripsi</h4>
+              <p class="small text-slate-600 mb-0">Burnout tugas, IPK anjlok, kendala dosen pembimbing, salah jurusan, atau kehilangan motivasi belajar.</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="h-100 p-4 rounded-2xl border border-slate-100 bg-slate-50 hover-card-effect plain-transition cursor-pointer">
+              <div class="rounded-3 d-flex align-items-center justify-content-center mb-4 plain-transition" style="width: 3rem; height: 3rem; background-color: #f3e8ff; color: #a855f7">
+                <i class="fa-solid fa-compass fs-4"></i>
+              </div>
+              <h4 class="fw-bold fs-5 mb-2 text-slate-800">Quarter-Life Crisis</h4>
+              <p class="small text-slate-600 mb-0">Overthinking masa depan, cemas melihat pencapaian teman, dan kebingungan karir setelah lulus.</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="h-100 p-4 rounded-2xl border border-slate-100 bg-slate-50 hover-card-effect plain-transition cursor-pointer">
+              <div class="rounded-3 d-flex align-items-center justify-content-center mb-4 plain-transition" style="width: 3rem; height: 3rem; background-color: #fee2e2; color: #ef4444">
+                <i class="fa-solid fa-user-group fs-4"></i>
+              </div>
+              <h4 class="fw-bold fs-5 mb-2 text-slate-800">Pertemanan & Asmara</h4>
+              <p class="small text-slate-600 mb-0">Merasa kesepian di perantauan, konflik circle kampus, FOMO, atau masalah dengan pasangan (toxic relationship).</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="h-100 p-4 rounded-2xl border border-slate-100 bg-slate-50 hover-card-effect plain-transition cursor-pointer">
+              <div class="rounded-3 d-flex align-items-center justify-content-center mb-4 plain-transition" style="width: 3rem; height: 3rem; background-color: #dcfce7; color: #22c55e">
+                <i class="fa-solid fa-house-chimney-crack fs-4"></i>
+              </div>
+              <h4 class="fw-bold fs-5 mb-2 text-slate-800">Keluarga & Finansial</h4>
+              <p class="small text-slate-600 mb-0">Tuntutan ekspektasi orang tua, homesick, atau kecemasan memikirkan UKT dan biaya hidup (anak kos).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="keunggulan" class="py-5 bg-slate-50">
+      <div class="custom-container my-4">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-6">
+            <h2 class="fw-bold text-slate-900 mb-4">Mengapa memilih Ruang Cerita?</h2>
+            <p class="text-slate-600 mb-5 fs-5">Kami merancang layanan ini untuk memastikan Anda merasa seaman dan senyaman mungkin saat menceritakan hal yang paling rapuh sekalipun.</p>
+
+            <div class="d-flex flex-column gap-4">
+              <div class="d-flex gap-4">
+                <div class="flex-shrink-0 rounded-circle bg-primary-100 d-flex align-items-center justify-content-center text-primary-600" style="width: 3rem; height: 3rem">
+                  <i class="fa-solid fa-user-secret fs-5"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold text-slate-800 mb-1">Anonimitas & Privasi 100%</h5>
+                  <p class="text-slate-600 mb-0">Gunakan nama samaran jika Anda mau. Semua percakapan dilindungi sistem enkripsi dan kode etik kerahasiaan konselor.</p>
+                </div>
+              </div>
+              <div class="d-flex gap-4">
+                <div class="flex-shrink-0 rounded-circle bg-primary-100 d-flex align-items-center justify-content-center text-primary-600" style="width: 3rem; height: 3rem">
+                  <i class="fa-solid fa-scale-balanced fs-5"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold text-slate-800 mb-1">Tanpa Penghakiman</h5>
+                  <p class="text-slate-600 mb-0">Konselor kami dilatih untuk mendengarkan secara objektif, berempati, dan tidak akan pernah menghakimi keputusan atau perasaan Anda.</p>
+                </div>
+              </div>
+              <div class="d-flex gap-4">
+                <div class="flex-shrink-0 rounded-circle bg-primary-100 d-flex align-items-center justify-content-center text-primary-600" style="width: 3rem; height: 3rem">
+                  <i class="fa-solid fa-clock fs-5"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold text-slate-800 mb-1">Jadwal Fleksibel</h5>
+                  <p class="text-slate-600 mb-0">Konsultasi bisa dilakukan via chat, voice call, atau video call kapanpun Anda merasa butuh teman bicara.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="bg-primary-600 rounded-3xl p-4 p-md-5 text-white shadow-lg position-relative overflow-hidden">
+              <div class="position-absolute top-0 end-0 opacity-10" style="margin-top: -2rem; margin-right: -1rem">
+                <i class="fa-solid fa-quote-right" style="font-size: 10rem"></i>
+              </div>
+              <h3 class="fw-bold mb-4 position-relative" style="z-index: 10">"Akhirnya skripsiku bisa jalan lagi."</h3>
+              <p class="text-primary-100 mb-5 fst-italic position-relative fs-5" style="z-index: 10; lh-base: 1.6">
+                "Sempat depresi dan menghilang dari kampus berbulan-bulan karena takut revisian. Konselor di sini bantu aku pelan-pelan mengurai rasa takutku. Aku merasa divalidasi dan didengar tanpa dihakimi malas."
+              </p>
+              <div class="d-flex align-items-center gap-3 position-relative" style="z-index: 10">
+                <div class="rounded-circle bg-white bg-opacity-25 d-flex align-items-center justify-content-center fw-bold fs-4" style="width: 3rem; height: 3rem">A</div>
+                <div>
+                  <h6 class="fw-bold mb-0">Andi (Nama Samaran)</h6>
+                  <p class="text-primary-200 small mb-0">Mahasiswa Semester 10</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="edukasi" class="py-5 bg-white border-top border-bottom border-slate-100">
+      <div class="custom-container my-4">
+        <div class="text-center mb-5">
+          <div class="d-inline-block px-3 py-1 bg-opacity-10 bg-success text-success rounded-full-btn fw-medium small mb-3 border border-success border-opacity-25">
+            <i class="fa-solid fa-book-open-reader me-2"></i> Pojok Literasi Mental
+          </div>
+          <h2 class="fw-bold text-slate-900 mb-3">Media Edukasi & Pemahaman Diri</h2>
+          <p class="text-slate-600 mx-auto fst-italic fs-5 mb-3" style="max-width: 48rem">"Menyadari bahwa kamu sedang tidak baik-baik saja adalah langkah pertama menuju penyembuhan. Edukasi dirimu, sayangi mentalmu."</p>
+          <p class="text-slate-500 mx-auto small" style="max-width: 42rem">
+            Ruang ini didedikasikan untuk berbagi informasi, mitos vs fakta, serta rujukan ilmiah seputar kesehatan mental mahasiswa yang dikurasi langsung oleh tim konselor kami.
+          </p>
+        </div>
+
+        <div class="mb-5">
+          <div class="d-flex align-items-center justify-content-between mb-4 border-bottom border-slate-100 pb-3">
+            <h4 class="fw-bold text-slate-800 mb-0 d-flex align-items-center gap-2"><i class="fa-solid fa-images text-primary-500"></i> Poster Edukasi</h4>
+            <span class="small bg-slate-100 text-slate-500 px-3 py-1 rounded-full-btn border border-slate-200" title="Hanya Admin/Konselor yang dapat mengelola ini dari Portal">
+              <i class="fa-solid fa-lock" style="font-size: 10px"></i> Managed by Admin
+            </span>
+          </div>
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+            <div class="col">
+              <div class="card h-100 border-slate-100 rounded-2xl overflow-hidden shadow-sm plain-transition cursor-pointer style-hover" onmouseover="this.classList.add('shadow-lg')" onmouseout="this.classList.remove('shadow-lg')">
+                <div class="position-relative overflow-hidden bg-slate-100" style="height: 16rem">
+                  <img src="https://placehold.co/600x800/e0f2fe/0369a1?text=Poster+Mengatasi+Burnout\nSkripsi" alt="Poster Burnout" class="w-100 h-100 object-fit-cover plain-transition" />
+                </div>
+                <div class="card-body p-4 bg-white">
+                  <h5 class="fw-bold text-slate-800 mb-1 fs-6">5 Cara Mengatasi Burnout Skripsi</h5>
+                  <p class="text-muted small mb-0" style="font-size: 11px">Diunggah: 12 Mei 2026</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100 border-slate-100 rounded-2xl overflow-hidden shadow-sm plain-transition cursor-pointer" onmouseover="this.classList.add('shadow-lg')" onmouseout="this.classList.remove('shadow-lg')">
+                <div class="position-relative overflow-hidden bg-slate-100" style="height: 16rem">
+                  <img src="https://placehold.co/600x800/fef08a/854d0e?text=Mitos+vs+Fakta\nDepresi" alt="Poster Depresi" class="w-100 h-100 object-fit-cover plain-transition" />
+                </div>
+                <div class="card-body p-4 bg-white">
+                  <h5 class="fw-bold text-slate-800 mb-1 fs-6">Mitos vs Fakta Seputar Depresi</h5>
+                  <p class="text-muted small mb-0" style="font-size: 11px">Diunggah: 10 Mei 2026</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100 border-slate-100 rounded-2xl overflow-hidden shadow-sm plain-transition cursor-pointer" onmouseover="this.classList.add('shadow-lg')" onmouseout="this.classList.remove('shadow-lg')">
+                <div class="position-relative overflow-hidden bg-slate-100" style="height: 16rem">
+                  <img src="https://placehold.co/600x800/dcfce7/166534?text=Kenali+Tanda\nQuarter+Life+Crisis" alt="Poster QLC" class="w-100 h-100 object-fit-cover plain-transition" />
+                </div>
+                <div class="card-body p-4 bg-white">
+                  <h5 class="fw-bold text-slate-800 mb-1 fs-6">Kenali Tanda Quarter Life Crisis</h5>
+                  <p class="text-muted small mb-0" style="font-size: 11px">Diunggah: 08 Mei 2026</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="d-flex align-items-center justify-content-between mb-4 border-bottom border-slate-100 pb-3">
+            <h4 class="fw-bold text-slate-800 mb-0 d-flex align-items-center gap-2"><i class="fa-solid fa-bookmark text-primary-500"></i> Referensi Jurnal & Bacaan</h4>
+            <span class="small bg-slate-100 text-slate-500 px-3 py-1 rounded-full-btn border border-slate-200"> <i class="fa-solid fa-lock" style="font-size: 10px"></i> Managed by Admin </span>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+              <a
+                href="#"
+                target="_blank"
+                class="d-flex align-items-start gap-3 p-3 rounded-3 border border-slate-200 text-decoration-none plain-transition link-hover-box"
+                style="background: transparent"
+                onmouseover="
+                  this.style.borderColor = 'var(--primary-500)';
+                  this.style.backgroundColor = 'var(--primary-50)';
+                "
+                onmouseout="
+                  this.style.borderColor = 'var(--slate-200)';
+                  this.style.backgroundColor = 'transparent';
+                "
+              >
+                <div class="rounded d-flex align-items-center justify-content-center flex-shrink-0 plain-transition" style="width: 3rem; height: 3rem; background-color: var(--primary-100); color: var(--primary-600)">
+                  <i class="fa-solid fa-file-pdf fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold text-slate-800 mb-1 plain-transition">Pengaruh Stres Akademik terhadap Kualitas Tidur Mahasiswa</h6>
+                  <p class="small text-slate-500 mb-2">Jurnal Psikologi Indonesia (2025)</p>
+                  <span class="small fw-semibold text-primary-600 d-flex align-items-center gap-1">Baca Selengkapnya <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px"></i></span>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a
+                href="#"
+                target="_blank"
+                class="d-flex align-items-start gap-3 p-3 rounded-3 border border-slate-200 text-decoration-none plain-transition link-hover-box"
+                style="background: transparent"
+                onmouseover="
+                  this.style.borderColor = 'var(--primary-500)';
+                  this.style.backgroundColor = 'var(--primary-50)';
+                "
+                onmouseout="
+                  this.style.borderColor = 'var(--slate-200)';
+                  this.style.backgroundColor = 'transparent';
+                "
+              >
+                <div class="rounded d-flex align-items-center justify-content-center flex-shrink-0 plain-transition" style="width: 3rem; height: 3rem; background-color: var(--primary-100); color: var(--primary-600)">
+                  <i class="fa-solid fa-link fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold text-slate-800 mb-1 plain-transition">Cara Membangun Boundaries dengan Teman Toxic di Kampus</h6>
+                  <p class="small text-slate-500 mb-2">Artikel Edukasi - Asosiasi Konselor</p>
+                  <span class="small fw-semibold text-primary-600 d-flex align-items-center gap-1">Baca Selengkapnya <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px"></i></span>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a
+                href="#"
+                target="_blank"
+                class="d-flex align-items-start gap-3 p-3 rounded-3 border border-slate-200 text-decoration-none plain-transition link-hover-box"
+                style="background: transparent"
+                onmouseover="
+                  this.style.borderColor = 'var(--primary-500)';
+                  this.style.backgroundColor = 'var(--primary-50)';
+                "
+                onmouseout="
+                  this.style.borderColor = 'var(--slate-200)';
+                  this.style.backgroundColor = 'transparent';
+                "
+              >
+                <div class="rounded d-flex align-items-center justify-content-center flex-shrink-0 plain-transition" style="width: 3rem; height: 3rem; background-color: var(--primary-100); color: var(--primary-600)">
+                  <i class="fa-solid fa-file-pdf fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold text-slate-800 mb-1 plain-transition">Dinamika Quarter-Life Crisis pada Mahasiswa Tingkat Akhir</h6>
+                  <p class="small text-slate-500 mb-2">Journal of Student Mental Health (2024)</p>
+                  <span class="small fw-semibold text-primary-600 d-flex align-items-center gap-1">Baca Selengkapnya <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px"></i></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cara-kerja" class="py-5 bg-slate-50">
+      <div class="custom-container my-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-slate-900 mb-3">Bagaimana Cara Kerjanya?</h2>
+          <p class="text-slate-600 mx-auto" style="max-width: 42rem">Langkah mudah untuk mulai mendapatkan bantuan dan ruang aman untuk bercerita.</p>
+        </div>
+
+        <div class="row g-4 position-relative">
+          <div class="d-none d-md-block position-absolute bg-slate-200" style="top: 2rem; left: 16%; right: 16%; height: 2px; z-index: 0"></div>
+
+          <div class="col-12 col-md-4 text-center position-relative" style="z-index: 10">
+            <div class="rounded-circle bg-primary-600 text-white d-flex align-items-center justify-content-center fs-4 fw-bold mx-auto mb-4 shadow-primary-custom border border-4 border-white" style="width: 4rem; height: 4rem">1</div>
+            <h5 class="fw-bold mb-2 text-slate-800">Pilih Mode Konsultasi</h5>
+            <p class="text-slate-600 small px-xl-4">Sesuaikan dengan urgensi masalahmu. Apakah butuh sekadar curhat anonim (Rendah), sesi deep talk (Sedang), atau bantuan darurat (Urgent).</p>
+          </div>
+
+          <div class="col-12 col-md-4 text-center position-relative" style="z-index: 10">
+            <div class="rounded-circle bg-primary-600 text-white d-flex align-items-center justify-content-center fs-4 fw-bold mx-auto mb-4 shadow-primary-custom border border-4 border-white" style="width: 4rem; height: 4rem">2</div>
+            <h5 class="fw-bold mb-2 text-slate-800">Isi Form / Hubungi</h5>
+            <p class="text-slate-600 small px-xl-4">Isi formulir singkat. Jika memilih mode Urgent, kamu akan langsung diarahkan ke WhatsApp konselor kami yang sedang standby.</p>
+          </div>
+
+          <div class="col-12 col-md-4 text-center position-relative" style="z-index: 10">
+            <div class="rounded-circle bg-primary-600 text-white d-flex align-items-center justify-content-center fs-4 fw-bold mx-auto mb-4 shadow-primary-custom border border-4 border-white" style="width: 4rem; height: 4rem">3</div>
+            <h5 class="fw-bold mb-2 text-slate-800">Mulai Sesi Aman</h5>
+            <p class="text-slate-600 small px-xl-4">Konselor akan merespon pesanmu atau menjadwalkan waktu yang tepat untuk berdiskusi dengan aman, nyaman, dan rahasia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="konsultasi" class="py-5 bg-white">
+      <div class="custom-container my-4" style="max-width: 56rem">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-slate-900 mb-3">Mulai Cerita Sekarang</h2>
+          <p class="text-slate-600">Pilih jenis layanan yang paling sesuai dengan kondisimu saat ini.</p>
+        </div>
+
+        <div id="form-container" class="bg-white rounded-3xl shadow-lg border border-slate-100 p-4 p-md-5 position-relative overflow-hidden">
+          <div id="urgency-selector" class="mb-5">
+            <label class="d-block small fw-medium text-slate-700 mb-4 text-center">Seberapa mendesak masalah yang sedang kamu hadapi?</label>
+            <div class="row g-3">
+              <div class="col-12 col-md-4">
+                <div
+                  id="btn-rendah"
+                  onclick="selectUrgency('rendah')"
+                  class="cursor-pointer border border-2 border-slate-200 rounded-3 p-3 h-100 plain-transition"
+                  onmouseover="if (this.className.indexOf('border-blue-500') == -1) this.style.borderColor = '#93c5fd';"
+                  onmouseout="if (this.className.indexOf('border-blue-500') == -1) this.style.borderColor = 'var(--slate-200)';"
+                >
+                  <div class="d-flex align-items-center justify-content-between mb-2">
+                    <h6 class="fw-bold text-slate-800 mb-0 transition-target-h4">Sekali Pesan</h6>
+                    <i class="fa-solid fa-paper-plane text-blue-500"></i>
+                  </div>
+                  <p class="text-slate-500 mb-0 transition-target-p" style="font-size: 11px; lh-base: 1.4">Hanya ingin meluapkan perasaan sesaat secara anonim (Satu Arah).</p>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div id="btn-sedang" onclick="selectUrgency('sedang')" class="cursor-pointer border border-2 border-primary-500 bg-primary-50 rounded-3 p-3 h-100 plain-transition">
+                  <div class="d-flex align-items-center justify-content-between mb-2">
+                    <h6 class="fw-bold text-primary-800 mb-0 transition-target-h4">Sesi Deep Talk</h6>
+                    <i class="fa-solid fa-comments text-primary-500"></i>
+                  </div>
+                  <p class="text-primary-700 mb-0 transition-target-p" style="font-size: 11px; lh-base: 1.4">Butuh konselor untuk ngobrol, curhat, dan mencari jalan keluar bersama.</p>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div
+                  id="btn-urgent"
+                  onclick="selectUrgency('urgent')"
+                  class="cursor-pointer border border-2 border-slate-200 rounded-3 p-3 h-100 plain-transition"
+                  onmouseover="if (this.className.indexOf('border-red-500') == -1) this.style.borderColor = '#fca5a5';"
+                  onmouseout="if (this.className.indexOf('border-red-500') == -1) this.style.borderColor = 'var(--slate-200)';"
+                >
+                  <div class="d-flex align-items-center justify-content-between mb-2">
+                    <h6 class="fw-bold text-slate-800 mb-0 transition-target-h4">Darurat / Urgent</h6>
+                    <i class="fa-solid fa-triangle-exclamation text-red-500"></i>
+                  </div>
+                  <p class="text-slate-500 mb-0 transition-target-p" style="font-size: 11px; lh-base: 1.4">Kondisi krisis, butuh bantuan konselor untuk merespon saat ini juga.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form id="consultation-form" class="needs-validation">
+            <div id="form-area-standard" class="fade-in">
+              <div id="personal-info-group" class="row g-4 mb-4">
+                <div class="col-12 col-md-6">
+                  <label for="name" class="form-label small fw-medium text-slate-700">Nama Panggilan / Samaran <span class="text-danger">*</span></label>
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    class="form-control p-3 border-slate-200 rounded-3 bg-slate-50 plain-transition"
+                    style="box-shadow: none"
+                    onfocus="
+                      this.style.backgroundColor = '#ffffff';
+                      this.style.borderColor = 'var(--primary-500)';
+                    "
+                    onblur="
+                      this.style.backgroundColor = 'var(--slate-50)';
+                      this.style.borderColor = 'var(--slate-200)';
+                    "
+                    placeholder="Cth: Anon, Budi, Mawar"
+                  />
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="contact" class="form-label small fw-medium text-slate-700">Kontak (WA/Telegram) <span class="text-danger">*</span></label>
+                  <input
+                    type="text"
+                    id="contact"
+                    required
+                    class="form-control p-3 border-slate-200 rounded-3 bg-slate-50 plain-transition"
+                    style="box-shadow: none"
+                    onfocus="
+                      this.style.backgroundColor = '#ffffff';
+                      this.style.borderColor = 'var(--primary-500)';
+                    "
+                    onblur="
+                      this.style.backgroundColor = 'var(--slate-50)';
+                      this.style.borderColor = 'var(--slate-200)';
+                    "
+                    placeholder="Untuk konfirmasi jadwal"
+                  />
+                </div>
+              </div>
+
+              <div id="topic-group" class="mb-4">
+                <label for="topic" class="form-label small fw-medium text-slate-700">Topik Pembicaraan <span class="text-danger">*</span></label>
+                <select
+                  id="topic"
+                  required
+                  class="form-select p-3 border-slate-200 rounded-3 bg-slate-50 plain-transition"
+                  style="box-shadow: none"
+                  onfocus="
+                    this.style.backgroundColor = '#ffffff';
+                    this.style.borderColor = 'var(--primary-500)';
+                  "
+                  onblur="
+                    this.style.backgroundColor = 'var(--slate-50)';
+                    this.style.borderColor = 'var(--slate-200)';
+                  "
+                >
+                  <option value="" disabled selected>Pilih topik permasalahan...</option>
+                  <option value="akademik">Akademik & Skripsi</option>
+                  <option value="karir">Quarter-Life Crisis & Karir</option>
+                  <option value="sosial">Pertemanan & Asmara</option>
+                  <option value="keluarga">Keluarga & Finansial</option>
+                  <option value="lainnya">Lainnya...</option>
+                </select>
+              </div>
+
+              <div class="mb-4">
+                <label for="message" id="message-label" class="form-label small fw-medium text-slate-700">Ceritakan sedikit tentang apa yang sedang kamu rasakan (Opsional)</label>
+                <textarea
+                  id="message"
+                  rows="4"
+                  placeholder="Misal: Saya merasa burnout dan kehilangan motivasi..."
+                  class="form-control p-3 border-slate-200 rounded-3 bg-slate-50 plain-transition"
+                  style="box-shadow: none; resize: none"
+                  onfocus="
+                    this.style.backgroundColor = '#ffffff';
+                    this.style.borderColor = 'var(--primary-500)';
+                  "
+                  onblur="
+                    this.style.backgroundColor = 'var(--slate-50)';
+                    this.style.borderColor = 'var(--slate-200)';
+                  "
+                ></textarea>
+              </div>
+
+              <div class="d-flex align-items-start mb-4" id="consent-group">
+                <div class="pt-1">
+                  <input id="consent" type="checkbox" required class="form-check-input" style="width: 1.1rem; height: 1.1rem" />
+                </div>
+                <div class="ms-3 small">
+                  <label for="consent" class="fw-medium text-slate-700 cursor-pointer">Saya setuju dengan ketentuan privasi</label>
+                  <p class="text-slate-500 mb-0" style="font-size: 11px">Informasi yang saya berikan akan disimpan dengan aman dan hanya digunakan untuk keperluan konsultasi.</p>
+                </div>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn w-100 bg-primary-600 text-white fw-bold py-3 rounded-3 plain-transition d-flex justify-content-center align-items-center gap-2">
+                <span id="submit-text">Jadwalkan Sesi Deep Talk</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+
+          <div id="area-urgent" class="d-none text-center py-4 fade-in">
+            <div class="rounded-circle bg-opacity-10 bg-danger d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 5rem; height: 5rem">
+              <i class="fa-solid fa-phone-volume fs-1 text-danger"></i>
+            </div>
+            <h3 class="fw-bold text-slate-800 mb-2">Kamu Tidak Sendirian.</h3>
+            <p class="text-slate-600 mb-4 mx-auto" style="max-width: 28rem">Kami mengerti ini terasa sangat berat. Konselor kami yang sedang bertugas siap merespon pesanmu sekarang juga melalui WhatsApp.</p>
+            <a
+              href="https://wa.me/6281234567890?text=Halo%20Ruang%20Cerita,%20saya%20butuh%20bantuan%20urgent%20saat%20ini."
+              target="_blank"
+              class="btn bg-success text-white fw-bold px-4 py-3 rounded-3 shadow-sm d-inline-flex justify-content-center align-items-center gap-3 w-100 w-md-auto"
+            >
+              <i class="fa-brands fa-whatsapp fs-4"></i>
+              <span>Chat WhatsApp Konselor Sekarang</span>
+            </a>
+          </div>
+
+          <div id="success-message" class="d-none py-5 text-center fade-in">
+            <div class="rounded-circle bg-opacity-10 bg-success d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 5rem; height: 5rem">
+              <i class="fa-solid fa-check fs-1 text-success"></i>
+            </div>
+            <h3 class="fw-bold text-slate-800 mb-2">Permintaan Berhasil Dikirim</h3>
+            <p class="text-slate-600 mb-4 mx-auto" style="max-width: 32rem">
+              Terima kasih atas keberanianmu untuk mengambil langkah pertama. Admin kami akan segera menghubungi Anda melalui kontak yang diberikan maksimal dalam 1x24 jam untuk penjadwalan sesi.
+            </p>
+            <button
+              onclick="resetForm()"
+              class="btn border border-primary-200 text-primary-600 fw-medium px-4 py-2 rounded-full-btn"
+              onmouseover="this.style.backgroundColor = 'var(--primary-50)'"
+              onmouseout="this.style.backgroundColor = 'transparent'"
+            >
+              Kembali
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-4 bg-opacity-10 bg-danger border border-danger border-opacity-25 rounded-3 p-3 d-flex gap-3">
+          <i class="fa-solid fa-triangle-exclamation text-danger fs-5 mt-1"></i>
+          <div>
+            <p class="small text-danger mb-0 lh-base">
+              <strong>Penting:</strong> Layanan kami bukan untuk kondisi gawat darurat medis atau ancaman bunuh diri segera. Jika Anda berada dalam krisis darurat, mohon segera hubungi nomor layanan darurat (119) atau layanan kesehatan jiwa
+              terdekat di kota Anda.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-slate-900 py-20 border-t border-slate-800" style="background-color: #0f172a; color: #cbd5e1">
+      <div class="custom-container">
+        <div class="row g-4 mb-4">
+          <div class="col-12 col-md-6">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <div class="rounded-circle bg-primary-900 d-flex align-items-center justify-content-center text-primary-400" style="width: 2rem; height: 2rem">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <span class="fw-bold fs-5 tracking-tight text-white">Ruang<span class="text-primary-500">Cerita</span></span>
+            </div>
+            <p class="text-slate-400 small mb-4" style="max-width: 24rem">Platform dukungan psikologis khusus untuk mahasiswa. Kami menyediakan ruang aman, rahasia, dan suportif untuk membantu melewati dinamika masa kuliahmu.</p>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-slate-400 text-white-hover transition"><i class="fa-brands fa-instagram fs-5"></i></a>
+              <a href="#" class="text-slate-400 text-white-hover transition"><i class="fa-brands fa-twitter fs-5"></i></a>
+              <a href="#" class="text-slate-400 text-white-hover transition"><i class="fa-brands fa-tiktok fs-5"></i></a>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <h6 class="text-white fw-bold mb-3">Tautan</h6>
+            <ul class="list-unstyled d-flex flex-column gap-2 small">
+              <li><a href="#layanan" class="text-slate-400 text-decoration-none" onmouseover="this.style.color = 'var(--primary-500)'" onmouseout="this.style.color = 'var(--slate-400)'">Layanan</a></li>
+              <li><a href="#keunggulan" class="text-slate-400 text-decoration-none" onmouseover="this.style.color = 'var(--primary-500)'" onmouseout="this.style.color = 'var(--slate-400)'">Tentang Kami</a></li>
+              <li><a href="#cara-kerja" class="text-slate-400 text-decoration-none" onmouseover="this.style.color = 'var(--primary-500)'" onmouseout="this.style.color = 'var(--slate-400)'">Cara Kerja</a></li>
+              <li><a href="#" class="text-slate-400 text-decoration-none" onmouseover="this.style.color = 'var(--primary-500)'" onmouseout="this.style.color = 'var(--slate-400)'">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <h6 class="text-white fw-bold mb-3">Legal</h6>
+            <ul class="list-unstyled d-flex flex-column gap-2 small">
+              <li><a href="#" class="text-slate-400 text-decoration-none" onmouseover="this.style.color = 'var(--primary-500)'" onmouseout="this.style.color = 'var(--slate-400)'">Syarat & Ketentuan</a></li>
+              <li><a href="#" class="text-slate-400 text-decoration-none" onmouseover="this.style.color = 'var(--primary-500)'" onmouseout="this.style.color = 'var(--slate-400)'">Kebijakan Privasi</a></li>
+              <li><a href="#" class="text-slate-400 text-decoration-none" onmouseover="this.style.color = 'var(--primary-500)'" onmouseout="this.style.color = 'var(--slate-400)'">Kode Etik Konselor</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-top border-secondary border-opacity-10 mt-4 pt-4 d-flex flex-col flex-md-row justify-content-between align-items-center gap-3">
+          <p class="small text-slate-500 mb-0">&copy; 2024 Ruang Cerita. Hak cipta dilindungi.</p>
+          <p class="small text-slate-500 mb-0" style="font-size: 11px">Dibuat dengan <i class="fa-solid fa-heart text-danger mx-1"></i> untuk kesehatan mental Indonesia.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

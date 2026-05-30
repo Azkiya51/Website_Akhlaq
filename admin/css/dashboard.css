@@ -1,0 +1,32 @@
+.dashboard-card{
+  border:none;
+  border-radius:22px;
+  padding:25px;
+  color:white;
+  position:relative;
+  overflow:hidden;
+}
+
+.dashboard-card i{
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  font-size:55px;
+  opacity:0.2;
+}
+
+.bg-blue{
+  background:linear-gradient(135deg,#0ea5e9,#0284c7);
+}
+
+.bg-green{
+  background:linear-gradient(135deg,#22c55e,#15803d);
+}
+
+.bg-orange{
+  background:linear-gradient(135deg,#f59e0b,#d97706);
+}
+
+.bg-red{
+  background:linear-gradient(135deg,#ef4444,#dc2626);
+}
