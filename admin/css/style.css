@@ -11,6 +11,13 @@ body{
 }
 
 .main-content{
-  margin-left:260px;
-  padding:30px;
+    margin-left:260px;
+    min-height:100vh;
+    background:#f1f5f9;
+}
+
+.desktop-header{
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
