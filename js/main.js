@@ -7,7 +7,7 @@ const SUPABASE_URL = 'https://vegpnlpoghshbutgkvrt.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZlZ3BubHBvZ2hzaGJ1dGdrdnJ0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAzODU5MDgsImV4cCI6MjA5NTk2MTkwOH0.szFYpmEUMA8JdhwqRoIL8zK90rNTkWcEy5xP2JrhZk0';
 
 // Membuat client Supabase
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 
 // ==========================================
@@ -174,7 +174,7 @@ if (form) {
 
       try {
         // Eksekusi insert ke database Supabase
-        const { data, error } = await supabase
+            const { data, error } = await supabaseClient
           .from('konsultasi')
           .insert([
             {
