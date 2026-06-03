@@ -1,14 +1,16 @@
 async function checkUserSession() {
   try {
-    const { data: { session }, error } =
-      await supabaseClient.auth.getSession();
+    const {
+      data: { session },
+      error,
+    } = await supabaseClient.auth.getSession();
 
     console.log("SESSION:", session);
     console.log("ERROR:", error);
 
     if (error || !session) {
       alert("SESSION TIDAK ADA");
-      window.location.href = '/admin/page/login.html';
+      window.location.href = "/admin/page/login.html";
     }
   } catch (err) {
     console.error(err);
@@ -25,16 +27,15 @@ async function loadComponent(id, file) {
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     const html = await response.text();
     document.getElementById(id).innerHTML = html;
-  } catch (error) {
-  }
+  } catch (error) {}
 }
 
 async function initAdmin() {
-    await loadComponent("sidebar-container", "partial/sidebar.html");
-    await loadComponent("header-container", "partial/header.html");
-    await loadComponent("footer-container", "partial/footer.html");
+  await loadComponent("sidebar-container", "partial/sidebar.html");
+  await loadComponent("header-container", "partial/header.html");
+  await loadComponent("footer-container", "partial/footer.html");
 
-    loadPage("dashboard", "Dashboard");
+  loadPage("dashboard", "Dashboard");
 }
 
 initAdmin();
@@ -68,13 +69,13 @@ function updateClock() {
   const jam = String(now.getHours()).padStart(2, "0");
   const menit = String(now.getMinutes()).padStart(2, "0");
   const detik = String(now.getSeconds()).padStart(2, "0");
-  
+
   const desktopTime = `${jam}:${menit}:${detik}`;
   const mobileTime = `${jam}:${menit}`;
-  
+
   const desktopClock = document.getElementById("live-time");
   const mobileClock = document.getElementById("mobile-time");
-  
+
   if (desktopClock) desktopClock.textContent = desktopTime;
   if (mobileClock) mobileClock.textContent = mobileTime;
 }
@@ -82,18 +83,19 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 1000);
 
+async function logout() {
+  const konfirmasi = confirm("Yakin ingin logout?");
 
-function logout() {
+  if (!konfirmasi) return;
 
-    const konfirmasi = confirm(
-        "Yakin ingin logout?"
-    );
+  try {
+    const { error } = await supabaseClient.auth.signOut();
 
-    if (konfirmasi) {
+    if (error) throw error;
 
-        localStorage.removeItem("isLogin");
-
-        window.location.href = "/admin/page/login.html";
-
-    }
+    window.location.href = "/admin/page/login.html";
+  } catch (err) {
+    console.error(err);
+    alert("Gagal logout");
+  }
 }
