@@ -3,7 +3,7 @@ async function checkUserSession() {
     const { data: { session }, error } = await supabaseClient.auth.getSession();
     
     if (error || !session) {
-      window.location.href = '/admin/page/login.html';
+      window.location.href = '/admin/index.html';
     }
   } catch (err) {
     window.location.href = '/admin/page/login.html';
