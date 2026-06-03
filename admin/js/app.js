@@ -69,3 +69,19 @@ function updateClock() {
 
 updateClock();
 setInterval(updateClock, 1000);
+
+function logout() {
+
+    const konfirmasi = confirm(
+        "Yakin ingin logout?"
+    );
+
+    if (konfirmasi) {
+
+        localStorage.removeItem("isLogin");
+
+        window.location.href = "../page/login.html";
+
+    }
+
+}

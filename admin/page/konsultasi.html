@@ -1,4 +1,3 @@
-
 <div class="container-fluid pt-4">
   <div class="topbar">
     <div>
@@ -7,120 +6,133 @@
       <p class="text-secondary">Kelola Konsultasi Pengguna</p>
     </div>
   </div>
- <div class="card shadow-sm border-0">
-
+  <div class="card shadow-sm border-0">
     <div class="card-header bg-white py-3">
-        <h6 class="m-0 fw-bold text-primary">
-            Data Konsultasi
-        </h6>
+      <h6 class="m-0 fw-bold text-primary">Data Konsultasi</h6>
     </div>
 
     <div class="card-body">
+      <div class="table-responsive">
+        <table id="konsultasiTable" class="table table-bordered table-hover align-middle">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Email</th>
+              <th>Kategori</th>
+              <th>Tanggal</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
 
-        <div class="table-responsive">
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Adi Nugraha</td>
+              <td>adi@gmail.com</td>
+              <td>Akademik</td>
+              <td>03/06/2026</td>
+              <td>
+                <span class="badge bg-success"> Selesai </span>
+              </td>
+              <td>
+                <button class="btn btn-primary btn-sm" onclick="bukaBalasan(this)">Balas</button>
+              </td>
+            </tr>
 
-            <table id="konsultasiTable"
-                class="table table-bordered table-hover align-middle">
+            <tr>
+              <td>2</td>
+              <td>Budi Santoso</td>
+              <td>budi@gmail.com</td>
+              <td>Pribadi</td>
+              <td>03/06/2026</td>
+              <td>
+                <span class="badge bg-warning text-dark"> Proses </span>
+              </td>
+              <td>
+                <button class="btn btn-primary btn-sm" onclick="bukaBalasan(this)">Balas</button>
+              </td>
+            </tr>
 
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Nama</th>
-                        <th>Email</th>
-                        <th>Kategori</th>
-                        <th>Tanggal</th>
-                        <th>Status</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
+            <tr>
+              <td>3</td>
+              <td>Siti Aisyah</td>
+              <td>siti@gmail.com</td>
+              <td>Keluarga</td>
+              <td>03/06/2026</td>
+              <td>
+                <span class="badge bg-danger"> Menunggu </span>
+              </td>
+              <td>
+               <button class="btn btn-primary btn-sm" onclick="bukaBalasan(this)">Balas</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="modal fade" id="balasModal">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5>Balas Konsultasi</h5>
 
-                <tbody>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
 
-                    <tr>
-                        <td>1</td>
-                        <td>Adi Nugraha</td>
-                        <td>adi@gmail.com</td>
-                        <td>Akademik</td>
-                        <td>03/06/2026</td>
-                        <td>
-                            <span class="badge bg-success">
-                                Selesai
-                            </span>
-                        </td>
-                        <td>
-                            <button class="btn btn-primary btn-sm">
-                                Detail
-                            </button>
-                        </td>
-                    </tr>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label>Nama</label>
 
-                    <tr>
-                        <td>2</td>
-                        <td>Budi Santoso</td>
-                        <td>budi@gmail.com</td>
-                        <td>Pribadi</td>
-                        <td>03/06/2026</td>
-                        <td>
-                            <span class="badge bg-warning text-dark">
-                                Proses
-                            </span>
-                        </td>
-                        <td>
-                            <button class="btn btn-primary btn-sm">
-                                Detail
-                            </button>
-                        </td>
-                    </tr>
+                  <input type="text" id="balasNama" class="form-control" readonly />
+                </div>
 
-                    <tr>
-                        <td>3</td>
-                        <td>Siti Aisyah</td>
-                        <td>siti@gmail.com</td>
-                        <td>Keluarga</td>
-                        <td>03/06/2026</td>
-                        <td>
-                            <span class="badge bg-danger">
-                                Menunggu
-                            </span>
-                        </td>
-                        <td>
-                            <button class="btn btn-primary btn-sm">
-                                Detail
-                            </button>
-                        </td>
-                    </tr>
+                <div class="mb-3">
+                  <label>Email</label>
 
-                </tbody>
+                  <input type="text" id="balasEmail" class="form-control" readonly />
+                </div>
 
-            </table>
+                <div class="mb-3">
+                  <label>Kategori</label>
 
+                  <input type="text" id="balasKategori" class="form-control" readonly />
+                </div>
+
+                <div class="mb-3">
+                  <label>Balasan Konselor</label>
+
+                  <textarea id="balasan" rows="5" class="form-control"></textarea>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <button class="btn btn-success" onclick="kirimBalasan()">Kirim Balasan</button>
+              </div>
+            </div>
+          </div>
         </div>
-
+      </div>
     </div>
-
-</div>
+  </div>
 </div>
 <script>
-setTimeout(() => {
-
-    if ($.fn.DataTable.isDataTable('#konsultasiTable')) {
-        $('#konsultasiTable').DataTable().destroy();
+  setTimeout(() => {
+    if ($.fn.DataTable.isDataTable("#konsultasiTable")) {
+      $("#konsultasiTable").DataTable().destroy();
     }
 
-    $('#konsultasiTable').DataTable({
-        pageLength: 10,
-        responsive: true,
-        language: {
-            lengthMenu: "Show _MENU_ entries",
-            search: "Search:",
-            info: "Showing _START_ to _END_ of _TOTAL_ entries",
-            paginate: {
-                previous: "Previous",
-                next: "Next"
-            }
-        }
+    $("#konsultasiTable").DataTable({
+      pageLength: 10,
+      responsive: true,
+      language: {
+        lengthMenu: "Show _MENU_ entries",
+        search: "Search:",
+        info: "Showing _START_ to _END_ of _TOTAL_ entries",
+        paginate: {
+          previous: "Previous",
+          next: "Next",
+        },
+      },
     });
-
-}, 100);
-
+  }, 100);
 </script>
