@@ -70,7 +70,7 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 1000);
 
-<<<<<<< HEAD
+
 function logout() {
 
     const konfirmasi = confirm(
@@ -84,8 +84,8 @@ function logout() {
         window.location.href = "../page/login.html";
 
     }
+}
 
-=======
 async function logoutUser() {
   try {
     const { error } = await supabaseClient.auth.signOut();
@@ -95,6 +95,5 @@ async function logoutUser() {
     window.location.href = '/page/login.html'; 
   } catch (error) {
     alert("Gagal logout.");
-  }
->>>>>>> 7d3df2624358e4e92a8b850cbfc1463697da1c04
+  }d3df2624358e4e92a8b850cbfc1463697da1c04
 }
