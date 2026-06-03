@@ -13,6 +13,7 @@ async function checkUserSession() {
   } catch (err) {
     console.error(err);
     alert("ERROR CHECK SESSION");
+    window.location.href = "/admin/page/login.html";
   }
 }
 
