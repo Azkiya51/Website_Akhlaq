@@ -1,12 +1,18 @@
 async function checkUserSession() {
   try {
-    const { data: { session }, error } = await supabaseClient.auth.getSession();
-    
+    const { data: { session }, error } =
+      await supabaseClient.auth.getSession();
+
+    console.log("SESSION:", session);
+    console.log("ERROR:", error);
+
     if (error || !session) {
-      window.location.href = '/admin/index.html';
+      alert("SESSION TIDAK ADA");
+      window.location.href = '/admin/page/login.html';
     }
   } catch (err) {
-    window.location.href = '/admin/page/login.html';
+    console.error(err);
+    alert("ERROR CHECK SESSION");
   }
 }
 
