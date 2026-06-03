@@ -1,0 +1,137 @@
+<div class="container-fluid">
+
+    <div class="topbar">
+        <div>
+            <h2 class="fw-bold">Edukasi</h2>
+            <p class="text-secondary">
+                Kelola konten edukasi untuk pengguna
+            </p>
+        </div>
+
+        <button class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#tambahEdukasiModal">
+            <i class="fa-solid fa-plus"></i>
+            Tambah Edukasi
+        </button>
+    </div>
+
+    <div class="card shadow-sm border-0">
+
+        <div class="card-header bg-white py-3">
+            <h6 class="m-0 fw-bold text-primary">
+                Data Edukasi
+            </h6>
+        </div>
+
+        <div class="card-body">
+
+            <div class="table-responsive">
+
+                <table id="edukasiTable"
+                    class="table table-bordered table-hover align-middle">
+
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Judul</th>
+                            <th>Kategori</th>
+                            <th>Tanggal Upload</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="edukasiBody">
+
+                        <tr>
+                            <td>1</td>
+                            <td>Cara Mengelola Stres</td>
+                            <td>Jurnal</td>
+                            <td>03/06/2026</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Publish
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn btn-warning btn-sm">
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-danger btn-sm">
+                                    Hapus
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+                <div class="modal fade" id="tambahEdukasiModal">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5>Tambah Edukasi</h5>
+                <button class="btn-close"
+                    data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <input type="text"
+                    id="judul"
+                    class="form-control mb-3"
+                    placeholder="Judul Edukasi">
+
+                <select id="kategori"
+                    class="form-select mb-3">
+
+                    <option>Jurnal</option>
+                    <option>Poster</option>
+                    <option>Video</option>
+                    <option>Infografis</option>
+                    <option>E-Book</option>
+
+                </select>
+
+                <select id="status"
+                    class="form-select">
+
+                    <option>Publish</option>
+                    <option>Draft</option>
+
+                </select>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button class="btn btn-primary"
+                    onclick="tambahEdukasi()">
+
+                    Simpan
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="modal fade" id="tambahEdukasiModal">
+   ...
+</div>
+

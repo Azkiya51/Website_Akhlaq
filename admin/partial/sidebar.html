@@ -10,8 +10,7 @@
   <a
     href="#"
     class="menu-item active"
-    onclick="
-      loadPage('dashboard');
+    onclick="loadPage('dashboard','Dashboard');
       setActiveMenu(this);
     "
   >
@@ -22,8 +21,7 @@
   <a
     href="#"
     class="menu-item"
-    onclick="
-      loadPage('konsultasi');
+   onclick="loadPage('konsultasi','Konsultasi');
       setActiveMenu(this);
     "
   >
@@ -31,27 +29,22 @@
     Konsultasi
   </a>
 
-  <a href="" class="menu-item">
+  <a href="#"
+   class="menu-item"
+  onclick="loadPage('edukasi','Edukasi');
+      setActiveMenu(this);
+    ">
     <i class="fa-solid fa-book"></i>
 
     Edukasi
   </a>
 
-  <a href="#" class="menu-item">
+  <a href="#" class="menu-item"
+  onclick="loadPage('konselor','Konselor');
+      setActiveMenu(this);
+    ">
     <i class="fa-solid fa-user-doctor"></i>
 
     Konselor
-  </a>
-
-  <a href="#" class="menu-item">
-    <i class="fa-solid fa-users"></i>
-
-    Pengguna
-  </a>
-
-  <a href="#" class="menu-item">
-    <i class="fa-solid fa-gear"></i>
-
-    Pengaturan
   </a>
 </div>

@@ -8,11 +8,16 @@ loadComponent("sidebar-container", "partial/sidebar.html");
 loadComponent("header-container", "partial/header.html");
 loadComponent("footer-container", "partial/footer.html");
 
-function loadPage(page) {
-  loadComponent("content-container", `page/${page}.html`);
-}
+function loadPage(page, title) {
 
-loadPage("dashboard");
+    loadComponent("content-container", `page/${page}.html`);
+
+    const pageTitle = document.getElementById("page-title");
+
+    if (pageTitle) {
+        pageTitle.textContent = title;
+    }
+}
 
 function setActiveMenu(element) {
   document.querySelectorAll(".menu-item").forEach((item) => item.classList.remove("active"));

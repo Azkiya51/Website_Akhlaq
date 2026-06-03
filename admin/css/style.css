@@ -21,3 +21,31 @@ body{
     top:0;
     z-index:1000;
 }
+
+.card {
+    border-radius: 10px;
+}
+
+.card-header {
+    background: #fff;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+.table thead th {
+    font-weight: 700;
+    color: #5a5c69;
+    white-space: nowrap;
+}
+
+.table tbody tr:hover {
+    background: #f8f9fc;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border-radius: 6px;
+}
+
+.page-item.active .page-link {
+    background-color: #4e73df;
+    border-color: #4e73df;
+}

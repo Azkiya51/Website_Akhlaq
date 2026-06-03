@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
   <div class="topbar">
     <div>
@@ -6,33 +7,120 @@
       <p class="text-secondary">Selamat datang kembali Admin 👋</p>
     </div>
   </div>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+ <div class="card shadow-sm border-0">
+
+    <div class="card-header bg-white py-3">
+        <h6 class="m-0 fw-bold text-primary">
+            Data Konsultasi
+        </h6>
+    </div>
+
+    <div class="card-body">
+
+        <div class="table-responsive">
+
+            <table id="konsultasiTable"
+                class="table table-bordered table-hover align-middle">
+
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Email</th>
+                        <th>Kategori</th>
+                        <th>Tanggal</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Adi Nugraha</td>
+                        <td>adi@gmail.com</td>
+                        <td>Akademik</td>
+                        <td>03/06/2026</td>
+                        <td>
+                            <span class="badge bg-success">
+                                Selesai
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-sm">
+                                Detail
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Budi Santoso</td>
+                        <td>budi@gmail.com</td>
+                        <td>Pribadi</td>
+                        <td>03/06/2026</td>
+                        <td>
+                            <span class="badge bg-warning text-dark">
+                                Proses
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-sm">
+                                Detail
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Siti Aisyah</td>
+                        <td>siti@gmail.com</td>
+                        <td>Keluarga</td>
+                        <td>03/06/2026</td>
+                        <td>
+                            <span class="badge bg-danger">
+                                Menunggu
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-sm">
+                                Detail
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
 </div>
+</div>
+<script>
+setTimeout(() => {
+
+    if ($.fn.DataTable.isDataTable('#konsultasiTable')) {
+        $('#konsultasiTable').DataTable().destroy();
+    }
+
+    $('#konsultasiTable').DataTable({
+        pageLength: 10,
+        responsive: true,
+        language: {
+            lengthMenu: "Show _MENU_ entries",
+            search: "Search:",
+            info: "Showing _START_ to _END_ of _TOTAL_ entries",
+            paginate: {
+                previous: "Previous",
+                next: "Next"
+            }
+        }
+    });
+
+}, 100);
+
+</script>
