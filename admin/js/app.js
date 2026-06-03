@@ -28,10 +28,15 @@ async function loadComponent(id, file) {
   }
 }
 
-loadComponent("sidebar-container", "partial/sidebar.html");
-loadComponent("header-container", "partial/header.html");
-loadComponent("footer-container", "partial/footer.html");
+async function initAdmin() {
+    await loadComponent("sidebar-container", "partial/sidebar.html");
+    await loadComponent("header-container", "partial/header.html");
+    await loadComponent("footer-container", "partial/footer.html");
 
+    loadPage("dashboard", "Dashboard");
+}
+
+initAdmin();
 function loadPage(page, title) {
   loadComponent("content-container", `page/${page}.html`);
   const pageTitle = document.getElementById("page-title");
@@ -87,7 +92,7 @@ function logout() {
 
         localStorage.removeItem("isLogin");
 
-        window.location.href = "../page/login.html";
+        window.location.href = "/admin/page/login.html";
 
     }
 }
