@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         document.getElementById('successMessage').classList.add('show');
                         
                         setTimeout(() => {
-                            window.location.href = '/admin/'; 
+                            window.location.href = '/admin/index.html'; 
                         }, 1500);
                     }
                 } catch (err) {
