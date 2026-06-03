@@ -3,10 +3,10 @@ async function checkUserSession() {
     const { data: { session }, error } = await supabaseClient.auth.getSession();
     
     if (error || !session) {
-      window.location.href = 'page/login.html';
+      window.location.href = '/page/login.html';
     }
   } catch (err) {
-    window.location.href = 'page/login.html';
+    window.location.href = '/page/login.html';
   }
 }
 
@@ -76,7 +76,7 @@ async function logoutUser() {
     if (error) throw error;
     
     localStorage.removeItem('userEmail');
-    window.location.href = 'page/login.html'; 
+    window.location.href = '/page/login.html'; 
   } catch (error) {
     alert("Gagal logout.");
   }

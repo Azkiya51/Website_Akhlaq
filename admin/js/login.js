@@ -16,10 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
         loginForm.addEventListener('submit', async function(e) {
             e.preventDefault();
 
-            const email = document.getElementById('email').value;
+            const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
-            if (email !== "" && password.length >= 6) {
+            if (username !== "" && password.length >= 6) {
+                
+                const email = username + "@bkcare.com";
                 const submitBtn = document.querySelector('.submit-btn');
                 submitBtn.classList.add('loading');
 
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         document.getElementById('successMessage').classList.add('show');
                         
                         setTimeout(() => {
-                            window.location.href = '../index.html'; 
+                            window.location.href = '/'; 
                         }, 1500);
                     }
                 } catch (err) {
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert("Terjadi kesalahan sistem, silakan coba lagi.");
                 }
             } else {
-                alert("Mohon isi email dan password minimal 6 karakter.");
+                alert("Mohon isi username dan password minimal 6 karakter.");
             }
         });
     }
