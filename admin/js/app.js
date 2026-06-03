@@ -85,15 +85,3 @@ function logout() {
 
     }
 }
-
-async function logoutUser() {
-  try {
-    const { error } = await supabaseClient.auth.signOut();
-    if (error) throw error;
-    
-    localStorage.removeItem('userEmail');
-    window.location.href = '/page/login.html'; 
-  } catch (error) {
-    alert("Gagal logout.");
-  }d3df2624358e4e92a8b850cbfc1463697da1c04
-}
