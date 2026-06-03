@@ -1,108 +1,49 @@
 <div class="mobile-header">
-
   <div>
+    <small class="text-secondary"> Rabu, 27 Mei </small>
 
-    <small class="text-secondary">
-
-      Rabu, 27 Mei
-
-    </small>
-
-    <h5 class="fw-bold mb-0">
-
-      Beranda
-
-    </h5>
-
+    <h5 class="fw-bold mb-0">Beranda</h5>
   </div>
 
   <div class="d-flex align-items-center gap-3">
-
-    <div class="notification-box">
-
-      <i class="fa-solid fa-bell"></i>
-
-      <span class="notif-badge">
-
-        28
-
-      </span>
-
+    <div class="header-clock-mobile">
+      <span id="mobile-time"> 00:00:00 </span>
     </div>
 
-    <img
-    src="https://i.pravatar.cc/100"
-    class="profile-img">
-
+    <img src="https://i.pravatar.cc/100" class="profile-img" />
   </div>
-
 </div>
-<header class="desktop-header bg-white border-bottom py-3 px-4">
-    <div class="container-fluid">
+<header class="desktop-header bg-white border-bottom py-3 px-3">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <!-- Kiri -->
+      <div class="col-md-6">
+        <small class="text-secondary" id="current-date"> </small>
 
-        <div class="row align-items-center">
+        <h4 class="fw-bold mb-0" id="page-title">Dashboard</h4>
+      </div>
 
-            <!-- Kiri -->
-            <div class="col-md-6">
+      <!-- Kanan -->
+      <div class="col-md-6">
+        <div class="d-flex justify-content-end align-items-center gap-4">
+          <div class="header-clock">
+            <div id="live-time">00:00:00</div>
 
-                <small class="text-secondary">
-                    Selasa, 2 Juni 2026
-                </small>
+            <small> WIB </small>
+          </div>
 
-                <h4 class="fw-bold mb-0" id="page-title">
-                    Dashboard
-                </h4>
+          <!-- User -->
+          <div class="d-flex align-items-center">
+            <div class="text-end me-3">
+              <div class="fw-semibold">Adi Game</div>
 
+              <small class="text-secondary"> Administrator </small>
             </div>
 
-            <!-- Kanan -->
-            <div class="col-md-6">
-
-                <div class="d-flex justify-content-end align-items-center gap-4">
-
-                    <!-- Dark Mode -->
-                    <i class="fa-solid fa-moon fs-5 text-warning"></i>
-
-                    <!-- Notifikasi -->
-                    <div class="position-relative">
-
-                        <i class="fa-solid fa-bell fs-5"></i>
-
-                        <span
-                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            29
-                        </span>
-
-                    </div>
-
-                    <!-- User -->
-                    <div class="d-flex align-items-center">
-
-                        <div class="text-end me-3">
-
-                            <div class="fw-semibold">
-                                Adi Game
-                            </div>
-
-                            <small class="text-secondary">
-                                Administrator
-                            </small>
-
-                        </div>
-
-                        <img
-                            src="https://i.pravatar.cc/60"
-                            class="rounded-circle"
-                            width="50"
-                            height="50">
-
-                    </div>
-
-                </div>
-
-            </div>
-
+            <img src="https://i.pravatar.cc/60" class="rounded-circle" width="50" height="50" />
+          </div>
         </div>
-
+      </div>
     </div>
+  </div>
 </header>

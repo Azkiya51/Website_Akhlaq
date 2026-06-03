@@ -15,6 +15,15 @@
   opacity:0.2;
 }
 
+/* Jarak card ke tabel */
+.dashboard-stats {
+    margin-bottom: 40px;
+}
+
+.dashboard-table {
+    margin-top: 30px;
+}
+
 .bg-blue{
   background:linear-gradient(135deg,#0ea5e9,#0284c7);
 }
@@ -29,5 +38,111 @@
 
 .bg-red{
   background:linear-gradient(135deg,#ef4444,#dc2626);
+}
+
+/* ======================
+   DASHBOARD SPACING
+====================== */
+
+.container-fluid {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.topbar {
+    margin-bottom: 30px;
+}
+
+.topbar h2 {
+    margin-bottom: 10px;
+}
+
+.topbar p {
+    margin-bottom: 0;
+}
+
+/* ======================
+   CARD STATISTIK
+====================== */
+
+.row.g-4 {
+    margin-bottom: 35px;
+}
+
+.dashboard-card {
+    padding: 28px;
+    min-height: 130px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+}
+
+.dashboard-card h3 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.dashboard-card p {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.dashboard-card i {
+    font-size: 60px;
+    opacity: .15;
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
+
+/* ======================
+   TABEL
+====================== */
+
+.card {
+    border: none;
+    border-radius: 18px;
+}
+
+.card-header {
+    padding: 18px 25px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    padding: 15px;
+}
+
+.table tbody td {
+    padding: 15px;
+}
+
+/* ======================
+   HEADER
+====================== */
+
+.desktop-header {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+/* ======================
+   FOOTER
+====================== */
+
+footer {
+    margin-top: 40px;
 }
 
